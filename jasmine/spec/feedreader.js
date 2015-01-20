@@ -21,6 +21,20 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
+
+        /* Before any of the other specs in this test suite (RSS Feeds) are run,
+        * I want to make sure that allFeeds is defined and not null*/ 
+        /*beforeEach(function(){
+            
+            describe('if allFeeds variable', function() {
+
+                it('are defined', function() {
+                    expect(allFeeds).toBeDefined();
+                    expect(allFeeds.length).not.toBe(0);
+                });
+            });            
+        });
+        */
         it('are defined', function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
@@ -31,12 +45,27 @@ $(function() {
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-
+         it('are URL defined and not empty',function(){
+            for (entry in allFeeds){
+                expect(allFeeds[entry].url).toBeDefined();
+                expect(allFeeds[entry].url.length).not.toBe(0);   
+            }
+            
+         });
+        
 
         /* TODO: Write a test that loops through each feed
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
+         it('are names defined and not empty',function(){
+            for (entry in allFeeds){
+                expect(allFeeds[entry].name).toBeDefined();
+                expect(allFeeds[entry].name.length).not.toBe(0);   
+            }
+            
+         });
     });
 
 

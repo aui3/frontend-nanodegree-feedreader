@@ -10,18 +10,24 @@
 var allFeeds = [
     {
         name: 'Udacity Blog',
+        //name : '',
         url: 'http://blog.udacity.com/feeds/posts/default?alt=rss'
+        //url : ""
+
     }, {
         name: 'CSS Tricks',
         url: 'http://css-tricks.com/feed'
     }, {
         name: 'HTML5 Rocks',
         url: 'http://feeds.feedburner.com/html5rocks'
+        //url : ""
     }, {
         name: 'Linear Digressions',
         url: 'http://feeds.feedburner.com/udacity-linear-digressions'
     }
 ];
+/*Spec fails when allFeeds declared as empty string*/
+//var allFeeds=[]; 
 
 /* This function starts up our application. The Google Feed
  * Reader API is loaded asynchonously and will then call this
