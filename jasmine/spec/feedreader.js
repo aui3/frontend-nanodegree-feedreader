@@ -76,13 +76,31 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+    describe('The menu', function(){
+
+        it('is hidden by default',function(){
+            expect($('body').hasClass('menu-hidden')).toEqual(true);
+        });
+         
 
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+         var menuButton;
+       
+        it('does change visibility',function(){
+            menuButton=$('.menu-icon-link');
+            menuButton.click();  //trigger menu click event to show menu
+            expect($('body').hasClass('menu-hidden')).toEqual(false);   
 
+            menuButton.click();//click again
+            expect($('body').hasClass('menu-hidden')).toEqual(true);                
+
+        });  
+
+    });
     /* TODO: Write a new test suite named "Initial Entries" */
 
         /* TODO: Write a test that ensures when the loadFeed
@@ -91,6 +109,26 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test wil require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+    describe('Initial Enteries',function(){
+        
+
+        beforeEach(function(done){
+            google.load('feeds', '1');
+            //google.setOnLoadCallback(init);
+            loadFeed(0,done);
+            //done();
+
+        });
+
+        it('has been loaded',function(){
+
+            expect($('.feed').has('.entry').length).toBeGreaterThan(0);
+            //expect($('.feed').find('.entry').length).toBeGreaterThan(0);
+            //expect($('body').hasClass('menu-hidden')).toEqual(true);
+            
+        });
+
+    });
 
     /* TODO: Write a new test suite named "New Feed Selection"
 

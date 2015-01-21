@@ -77,8 +77,11 @@ h2 {
 }
 
 .menu-hidden .menu {
-    transform: translate3d(-12em, 0, 0);
-    transition: transform 0.2s;
+
+    /*The translate3d() CSS function moves the position of the element in the 3D space. 
+    This transformation is characterized by a 3-dimension vector whose coordinates define how much it moves in each direction*/
+    transform: translate3d(-12em, 0, 0);/*move back 12em left on x-axis*/
+    transition: transform 0.2s;/*how fast the menu hides back again*/
 }
 
 .feed {
