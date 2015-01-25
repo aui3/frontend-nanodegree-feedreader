@@ -1,3 +1,19 @@
+#Refrences:
+
+-http://jasmine.github.io/2.1/introduction.html
+
+-http://evanhahn.com/how-do-i-jasmine/
+
+-http://www.htmlgoodies.com/beyond/javascript/stips/using-jasmine-2.0s-new-done-function-to-test-asynchronous-processes.html
+
+-https://piazza.com/class/i0sf6tsmg0r7do?cid=918
+
+-http://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229
+
+-https://www.youtube.com/playlist?list=PLOxOmO43E6Jt0SruKGxtZs-W3PJN90G_a
+
+
+
 # Project Overview
 
 In this project you are given a web-based application that reads RSS feeds. The original developer of this application clearly saw the value in testing, they've already included [Jasmine](http://jasmine.github.io/) and even started writing their first test suite! Unfortunately, they decided to move on to start their own company and we're now left with an application with an incomplete test suite. That's where you come in.
